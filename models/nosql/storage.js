@@ -6,7 +6,7 @@ const StorageSchema = new mongoose.Schema({
         required: true,
     },
     filename: {
-        type: Number,
+        type: String,
         required: true,
     },
 },
