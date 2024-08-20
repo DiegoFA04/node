@@ -111,7 +111,3 @@ Esta es una API construida con Node.js y Express que permite gestionar una colec
 ## Contribuciones
 
 Las contribuciones son bienvenidas. Por favor, abre un issue o envía un pull request.
-
-## Licencia
-
-Este proyecto está licenciado bajo la Licencia MIT.
