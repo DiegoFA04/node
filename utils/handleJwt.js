@@ -1,5 +1,7 @@
 const jwt = require('jsonwebtoken');
 const JWT_SECRET = process.env.JWT_SECRET;
+const getProperties = require('../utils/handlePropertiesEngine');
+const propertiesKey = getProperties();
 
 /**
  * Debes pasar el objeto del usuario para firmar el token
@@ -7,7 +9,7 @@ const JWT_SECRET = process.env.JWT_SECRET;
  */
 const tokenSign = async (user) => {
     const sign = jwt.sign({
-        _id: user._id,
+        [propertiesKey.id]: user[propertiesKey.id],
         role: user.role,
     }, JWT_SECRET, {
         expiresIn: '2h'
